@@ -30,5 +30,5 @@ public class FooterPageObjectModel {
     WebElement downloadApp;
 
     @FindBy(xpath = ".//*[@id='footer']/div/div/div[2]/div/ul/li[4]/a")
-    WebElement
+    WebElement cookiePolicy;
 }

@@ -28,4 +28,13 @@ public class HeaderPageObjectModel {
 
     @FindBy(className = "room5-icons-search")
     WebElement searchBtn;
+
+    public void acceptCookies(){
+        cookieOkBtn.click();
+    }
+
+    public Boolean verifyCookiesPopup(){
+        Boolean status = cookieNotice.isDisplayed();
+        return status;
+    }
 }
