@@ -2,8 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import room5.trivago.pages.CookiesNoticePageObjectModel;
-import room5.trivago.pages.HeaderPageObjectModel;
+import pageObjectModels.*;
 
 /**
  * Created by Lenovo G50-70 on 25-07-2017.
