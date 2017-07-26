@@ -2,8 +2,7 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 
 /**
  * Created by Lenovo G50-70 on 25-07-2017.
@@ -11,14 +10,14 @@ import org.testng.annotations.BeforeClass;
 public class BaseSetup {
     WebDriver driver;
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium Webdriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://room5.trivago.com/");
     }
 
-    @AfterClass
+    @AfterSuite
     public void tearDown(){
         driver.close();
     }

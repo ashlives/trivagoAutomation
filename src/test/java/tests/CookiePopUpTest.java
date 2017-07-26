@@ -17,5 +17,6 @@ public class CookiePopUpTest extends BaseSetup {
         Boolean cookiesPopupApeared = objHeader.verifyCookiesPopup();
         Assert.assertTrue(cookiesPopupApeared);
         objHeader.acceptCookies();
+        System.out.print("Test Passed.");
     }
 }
