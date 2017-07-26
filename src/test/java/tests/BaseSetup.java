@@ -10,14 +10,14 @@ import org.testng.annotations.*;
 public class BaseSetup {
     WebDriver driver;
 
-    @BeforeSuite
+    @BeforeTest
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium Webdriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://room5.trivago.com/");
     }
 
-    @AfterSuite
+    @AfterTest
     public void tearDown(){
         driver.close();
     }

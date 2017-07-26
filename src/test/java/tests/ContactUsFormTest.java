@@ -1,6 +1,8 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjectModels.*;
@@ -13,12 +15,13 @@ public class ContactUsFormTest extends BaseSetup {
     ContactPageObjectModel objContact;
     CookiesNoticePageObjectModel objCookies;
 
-    @BeforeTest
+    @BeforeClass
     public void navigateToContact(){
         objFooter = new FooterPageObjectModel(driver);
         objContact = new ContactPageObjectModel(driver);
         objCookies = new CookiesNoticePageObjectModel(driver);
-        objCookies.acceptCookies();
+        if(objCookies.verifyCookiesPopup()){
+        objCookies.acceptCookies();}
         objFooter.clickContact();
     }
 
@@ -30,7 +33,7 @@ public class ContactUsFormTest extends BaseSetup {
         objContact.clickSubmit();
         String status = objContact.getSuccessStatus();
         Assert.assertEquals(status, "Success");
-        System.out.print("Test Passed.");
+        System.out.println("Test Passed.");
     }
 
     @Test

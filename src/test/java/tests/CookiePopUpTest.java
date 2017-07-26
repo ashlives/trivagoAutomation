@@ -2,7 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjectModels.*;
+import pageObjectModels.CookiesNoticePageObjectModel;
 
 /**
  * Created by Lenovo G50-70 on 25-07-2017.
@@ -16,6 +16,6 @@ public class CookiePopUpTest extends BaseSetup {
         Boolean cookiesPopupApeared = objHeader.verifyCookiesPopup();
         Assert.assertTrue(cookiesPopupApeared);
         objHeader.acceptCookies();
-        System.out.print("Test Passed.");
+        System.out.println("Test Passed.");
     }
 }
