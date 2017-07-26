@@ -17,24 +17,16 @@ public class HeaderPageObjectModel {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "cookie-notice")
-    WebElement cookieNotice;
-
-    @FindBy(id = "cn-accept-cookie")
-    WebElement cookieOkBtn;
-
     @FindBy(className = "nav-icon")
     WebElement menuBtn;
 
     @FindBy(className = "room5-icons-search")
     WebElement searchBtn;
 
-    public void acceptCookies(){
-        cookieOkBtn.click();
-    }
+    @FindBy(className = "logo home-page-link")
+    WebElement home;
 
-    public Boolean verifyCookiesPopup(){
-        Boolean status = cookieNotice.isDisplayed();
-        return status;
-    }
+    @FindBy(className = "nav-icon open")
+    WebElement closeNavMenuBtn;
+
 }

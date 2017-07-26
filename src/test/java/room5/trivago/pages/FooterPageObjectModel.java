@@ -31,4 +31,9 @@ public class FooterPageObjectModel {
 
     @FindBy(xpath = ".//*[@id='footer']/div/div/div[2]/div/ul/li[4]/a")
     WebElement cookiePolicy;
+
+    public void clickContact()
+    {
+        contact.click();
+    }
 }
