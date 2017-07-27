@@ -10,25 +10,36 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import pageObjectModels.ContactPageObjectModel;
+import pageObjectModels.CookiesNoticePageObjectModel;
+import pageObjectModels.FooterPageObjectModel;
 
 /**
  * Created by Lenovo G50-70 on 25-07-2017.
  */
 public class BaseSetup {
     WebDriver driver;
+    FooterPageObjectModel objFooter;
+    ContactPageObjectModel objContact;
+    CookiesNoticePageObjectModel objCookies;
+
     ExtentReports extent;
     ExtentTest logger;
     ExtentHtmlReporter htmlReporter;
-    String htmlReportPath = "D:\\Selenium Webdriver/MyOwnReport.html"; //Path for the HTML report to be saved
+    String htmlReportPath = System.getProperty("user.dir")+"/test-output/MyOwnReport.html"; //Path for the HTML report to be saved
 
-    @BeforeClass
+  @BeforeSuite
     public void report(){
         htmlReporter = new ExtentHtmlReporter(htmlReportPath);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }
+
     @BeforeTest
     public void setUp(){
+        htmlReporter = new ExtentHtmlReporter(htmlReportPath);
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium Webdriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://room5.trivago.com/");
@@ -52,8 +63,9 @@ public class BaseSetup {
         driver.close();
     }
 
-    @AfterClass
-    public void afterSuite(){
+    @AfterSuite
+    public void reportGenerate(){
         extent.flush();
     }
+
 }

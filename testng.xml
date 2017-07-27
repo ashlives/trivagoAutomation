@@ -2,23 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
     <suite name="All Test Suite">
-            <test verbose="2" preserve-order="true" name="Cookie Pop-up">
+            <test verbose="2" preserve-order="false" name="Cookie Pop-up">
                 <classes>
-                    <class name="tests.CookiePopUpTest">
-                        <methods>
-                            <include name="cookiePopupAppeared"/>
-                        </methods>
-                    </class>
+                    <class name="tests.CookiePopUpTest"/>
                 </classes>
             </test>
-    <test verbose="2" preserve-order="true" name="Contact Form">
-        <classes>
-            <class name="tests.ContactUsFormTest">
-                <methods>
-                    <include name="contactTestSuccess"/>
-                    <include name="contactTestFailure"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+            <test verbose="2" preserve-order="false" name="Contact For Success">
+                <classes>
+                    <class name="tests.ContactFormSuccessTest"/>
+                </classes>
+            </test>
+            <test verbose="2" preserve-order="false" name="Contact For Failure">
+                <classes>
+                    <class name="tests.ContactFormFailureTest"/>
+                </classes>
+            </test>
     </suite>
