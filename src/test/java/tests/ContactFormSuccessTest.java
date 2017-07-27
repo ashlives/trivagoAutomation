@@ -12,7 +12,7 @@ public class ContactFormSuccessTest extends BaseSetup {
 
     @Test
     public void contactTestSuccess(){
-        logger = extent.createTest("Contact Form Test - Sucess Message");
+        logger = extent.createTest("Contact Form Test - Sucess Message", "Testing the contact form functionality with all fields correctly filled.");
         String messageText = "some message";
         String email = "ademo@email.com";
         String fullName = "some name";

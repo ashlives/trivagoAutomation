@@ -14,7 +14,7 @@ public class ContactFormFailureTest extends BaseSetup {
 
     @Test
     public void contactTestFailure(){
-        logger = extent.createTest("Contact Form Test - Failure Message");
+        logger = extent.createTest("Contact Form Test - Failure Message", "Testing contact form functionality with one of the field as null.");
         String messageText = "some message";
         String email = "ademo@email.com";
         String fullName = "";

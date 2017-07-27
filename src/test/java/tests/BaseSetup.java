@@ -28,10 +28,11 @@ public class BaseSetup {
     ExtentHtmlReporter htmlReporter;
     String htmlReportPath = System.getProperty("user.dir")+"/test-output/MyOwnReport.html"; //Path for the HTML report to be saved
 
-  @BeforeSuite
+  @BeforeClass //Initialize ExtentReports
     public void report(){
         htmlReporter = new ExtentHtmlReporter(htmlReportPath);
         extent = new ExtentReports();
+        htmlReporter.setAppendExisting(true);
         extent.attachReporter(htmlReporter);
     }
 
@@ -60,12 +61,8 @@ public class BaseSetup {
 
     @AfterTest
     public void tearDown(){
-        driver.close();
-    }
-
-    @AfterSuite
-    public void reportGenerate(){
         extent.flush();
+        driver.close();
     }
 
 }

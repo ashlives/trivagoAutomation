@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * Created by Lenovo G50-70 on 25-07-2017.
@@ -35,5 +36,10 @@ public class FooterPageObjectModel {
     public void clickContact()
     {
         contact.click();
+    }
+
+    public void selectCountry(String country){
+        Select drpCountry = new Select(countryDropdown);
+        drpCountry.selectByVisibleText(country);
     }
 }

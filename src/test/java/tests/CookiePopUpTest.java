@@ -12,7 +12,7 @@ public class CookiePopUpTest extends BaseSetup {
 
     @Test
     public void cookiePopupAppeared(){
-        logger = extent.createTest("Cookies PopUp Test");
+        logger = extent.createTest("Cookies PopUp Test", "Testing if cookies notice shows up when visiting the page.");
         objCookies = new CookiesNoticePageObjectModel(driver);
         Boolean cookiesPopupApeared = objCookies.verifyCookiesPopup();
         Assert.assertTrue(cookiesPopupApeared);

@@ -7,14 +7,19 @@
                     <class name="tests.CookiePopUpTest"/>
                 </classes>
             </test>
-            <test verbose="2" preserve-order="false" name="Contact For Success">
+            <test verbose="2" preserve-order="false" name="Contact Form Success">
                 <classes>
                     <class name="tests.ContactFormSuccessTest"/>
                 </classes>
             </test>
-            <test verbose="2" preserve-order="false" name="Contact For Failure">
+            <test verbose="2" preserve-order="false" name="Contact Form Failure">
                 <classes>
                     <class name="tests.ContactFormFailureTest"/>
+                </classes>
+            </test>
+            <test verbose="2" preserve-order="false" name="Country Dropdown Selection">
+                <classes>
+                    <class name="tests.CountrySelectionTest"/>
                 </classes>
             </test>
     </suite>
