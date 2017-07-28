@@ -13,6 +13,7 @@ import org.testng.annotations.*;
 import pageObjectModels.ContactPageObjectModel;
 import pageObjectModels.CookiesNoticePageObjectModel;
 import pageObjectModels.FooterPageObjectModel;
+import pageObjectModels.PollPopUpObjectModel;
 
 /**
  * Created by Lenovo G50-70 on 25-07-2017.
@@ -22,6 +23,7 @@ public class BaseSetup {
     FooterPageObjectModel objFooter;
     ContactPageObjectModel objContact;
     CookiesNoticePageObjectModel objCookies;
+    PollPopUpObjectModel objPoll;
 
     ExtentReports extent;
     ExtentTest logger;
@@ -34,6 +36,7 @@ public class BaseSetup {
         extent = new ExtentReports();
         htmlReporter.setAppendExisting(true);
         extent.attachReporter(htmlReporter);
+        htmlReporter.config().setDocumentTitle("Trivago - Automation QA Task");
     }
 
     @BeforeTest

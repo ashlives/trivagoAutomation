@@ -22,4 +22,9 @@
                     <class name="tests.CountrySelectionTest"/>
                 </classes>
             </test>
+            <test verbose="2" preserve-order="false" name="Poll Popup">
+                <classes>
+                    <class name="tests.PollPopUpTest"/>
+                </classes>
+            </test>
     </suite>

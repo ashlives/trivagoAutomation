@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 /**
  * Created by Lenovo G50-70 on 26-07-2017.
@@ -13,7 +14,7 @@ public class ContactPageObjectModel {
 
     public ContactPageObjectModel(WebDriver driver){
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);
     }
 
     @FindBy(id = "message")
