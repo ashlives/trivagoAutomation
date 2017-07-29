@@ -8,12 +8,6 @@
     <artifactId>trivagoAutomation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <repository>
-        <id>jcenter</id>
-        <name>bintray</name>
-        <url>http://jcenter.bintray.com</url>
-    </repository>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
