@@ -8,6 +8,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pageObjectModels.ContactPageObjectModel;
@@ -44,8 +45,9 @@ public class BaseSetup {
         htmlReporter = new ExtentHtmlReporter(htmlReportPath);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        System.setProperty("webdriver.chrome.driver", "WebDrivers\\chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = new HtmlUnitDriver(true);
+        /*System.setProperty("webdriver.chrome.driver", "WebDrivers/chromedriver.exe");
+        driver = new ChromeDriver();*/
         driver.get("http://room5.trivago.com/");
     }
 
