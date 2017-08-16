@@ -44,7 +44,7 @@ public class BaseSetup {
         htmlReporter = new ExtentHtmlReporter(htmlReportPath);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        System.setProperty("webdriver.chrome.driver", "WebDrivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "WebDrivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://room5.trivago.com/");
     }
